@@ -147,7 +147,7 @@ angular.module('ethExplorer')
 
                   range = $scope.blockNum;
                   var blockPast = web3.eth.getBlock(1);
-                  if(blockBefore!==undefined){
+                  if(blockBefore!==undefined && blockBefore!==null){
                   $scope.blocktimeAverageAll = ((blockNewest.timestamp - blockPast.timestamp)/range).toFixed(2);
                   }
 
