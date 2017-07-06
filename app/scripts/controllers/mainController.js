@@ -115,7 +115,8 @@ angular.module('ethExplorer')
                   // Average Block Times:
                   // TODO: make fully async, put below into 'fastInfosCtrl'
 
-                  var blockBefore = undefined;
+                  var blockBefore = $scope.blockNum - 1;
+                  if (blockBefore <= 0){blockBefore = 0;}
                   if(blockBefore!==undefined){
                   $scope.blocktime = blockNewest.timestamp - blockBefore.timestamp;
                   }
